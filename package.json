@@ -14,8 +14,9 @@
     "commander": "1.2.0",
     "colorful": "2.1.0",
     "tracer": "0.6.1",
-    "express": "4.2.0",
-    "utilx": "0.0.5"
+    "express": "4.16.0",
+    "utilx": "0.0.5",
+    "snyk": "^1.88.0"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,10 @@
   "bin": {
     "velocity": "./bin/velocity"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
